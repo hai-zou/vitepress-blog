@@ -51,13 +51,13 @@ export default defineConfig({
             {
                 text: "技术",
                 items: [
-                    { text: "JavaScript", link: "/categories/JavaScript.html" },
-                    { text: "CSS", link: "/categories/CSS.html" },
-                    { text: "Node", link: "/categories/Node.html" },
-                    { text: "Vue", link: "/categories/Vue.html" },
-                    { text: "Git", link: "/categories/Git.html" },
-                    { text: "GitHub", link: "/categories/GitHub.html" },
-                    { text: "Other", link: "/categories/Other.html" },
+                    { text: "JavaScript", link: "/categories?type=JavaScript" },
+                    { text: "CSS", link: "/categories?type=CSS" },
+                    { text: "Node", link: "/categories?type=Node" },
+                    { text: "Vue", link: "/categories?type=Vue" },
+                    { text: "Git", link: "/categories?type=Git" },
+                    { text: "GitHub", link: "/categories?type=GitHub" },
+                    { text: "Other", link: "/categories?type=Other" },
                 ]
             },
             { text: "随笔", link: "/essay.html" },
