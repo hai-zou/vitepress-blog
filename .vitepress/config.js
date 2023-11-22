@@ -47,6 +47,7 @@ export default defineConfig({
 		pages: await getPages(),
 		author: "Hizo",
         logo: "/favicon.ico",
+		startTime: '2023-06-08 00:00:00',
         nav: [
             {
                 text: "技术",
