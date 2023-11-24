@@ -5,6 +5,11 @@ comment: false
 subscribe: false
 ---
 
+## 2023-11-24
+
+记一下，在写一个获取音频时长的需求，用的 `AudioContext.decodeAudioData()` API，但是我使用的是旧的回调函数的写法，引起了一个莫名其妙的问题，也不报错，不过改用新的 Promise 的用法就解决了。  
+具体用法参考 [官方 API 文档](https://developer.mozilla.org/zh-CN/docs/Web/API/BaseAudioContext/decodeAudioData)
+
 ## 2023-11-21
 
 今天准备把我的博客主题抽离出来，单独发布一个 npm 包，命名为 `vitepress-theme-poseidon`。  
