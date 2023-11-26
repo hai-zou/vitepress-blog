@@ -1,9 +1,9 @@
-import { defineConfig } from 'vitepress';
-import { getPages } from 'vitepress-theme-poseidon/pages';
-import { baseConfig } from 'vitepress-theme-poseidon/config';
+import { UserConfig, defineConfig } from 'vitepress';
+import { getPages } from 'vitepress-theme-poseidon/scripts/pages';
+import { baseConfig } from 'vitepress-theme-poseidon/scripts/config';
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default defineConfig(<UserConfig<any>>{
 	extends: baseConfig,
 	title: "旧梦",
     description: "学无止境！",
