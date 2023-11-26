@@ -1,7 +1,7 @@
 ---
 title: 关于
-article: false
-comment: false
+customPage: true
+hideComment: true
 ---
 
 ## 关于博主

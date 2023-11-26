@@ -1,7 +1,7 @@
 ---
 title: 归档
-article: false
-comment: false
+customPage: true
+hideComment: true
 ---
 
 <Archive />

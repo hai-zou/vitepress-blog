@@ -1,7 +1,7 @@
 ---
 title: 随笔
-article: false
-comment: false
+customPage: true
+hideComment: true
 ---
 
 ## 2023-11-24

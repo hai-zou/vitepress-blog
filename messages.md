@@ -1,6 +1,6 @@
 ---
 title: 留言板
-article: false
+customPage: true
 ---
 
 ::: info

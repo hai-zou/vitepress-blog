@@ -1,7 +1,7 @@
 ---
 title: 友链
-article: false
-comment: false
+customPage: true
+hideComment: true
 ---
 
 ::: tip
