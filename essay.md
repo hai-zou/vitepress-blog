@@ -2,7 +2,6 @@
 title: 随笔
 article: false
 comment: false
-subscribe: false
 ---
 
 ## 2023-11-24

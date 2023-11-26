@@ -1,7 +1,6 @@
 ---
 title: 留言板
 article: false
-subscribe: false
 ---
 
 ::: info
