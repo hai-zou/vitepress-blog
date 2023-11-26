@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress';
-import { getPages } from 'vitepress-theme-poseidon/src/pages';
-import { baseConfig } from 'vitepress-theme-poseidon/src/config';
+import { getPages } from 'vitepress-theme-poseidon/pages';
+import { baseConfig } from 'vitepress-theme-poseidon/config';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
