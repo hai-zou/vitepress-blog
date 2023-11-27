@@ -14,7 +14,7 @@
   "author": "haizou",
   "license": "ISC",
   "dependencies": {
-    "vitepress-theme-poseidon": "^0.1.16"
+    "vitepress-theme-poseidon": "^0.1.17"
   },
   "devDependencies": {
     "vitepress": "^1.0.0-rc.31"
