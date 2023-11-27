@@ -13,15 +13,15 @@
 	</div>
 </template>
 
-<script setup>
-const props = defineProps({
-    title: String,
-    link: String,
-    description: String,
-});
+<script setup lang="ts">
+const props = defineProps<{
+    title: string,
+    link: string,
+    description: string,
+}>();
 </script>
 
-<style lang="scss">
+<style scoped>
 .util-card-container {
 	display: inline-flex;
 	flex-direction: column;
@@ -32,17 +32,16 @@ const props = defineProps({
 	border-radius: 8px;
 	width: 10rem;
 	box-sizing: border-box;
+}
+.util-card-container .title {
+	font-size: 1.1rem;
+	cursor: pointer;
+}
 
-	.title {
-		font-size: 1.1rem;
-		cursor: pointer;
-	}
-
-	.desc {
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		font-size: 0.9rem;
-	}
+.util-card-container .desc {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 0.9rem;
 }
 </style>
