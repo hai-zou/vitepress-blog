@@ -31,17 +31,17 @@ export default defineConfig(<UserConfig<any>>{
 			}
 		],
 		// 谷歌分析
-		[ "script", { async: "", src: "https://www.googletagmanager.com/gtag/js?id=G-WW5WXCXDFX" } ],
-		[
-			"script",
-			{},
-			`
-				window.dataLayer = window.dataLayer || [];
-				function gtag(){dataLayer.push(arguments);}
-				gtag('js', new Date());
-				gtag('config', 'G-WW5WXCXDFX');
-			`
-		]
+		// [ "script", { async: "", src: "https://www.googletagmanager.com/gtag/js?id=G-WW5WXCXDFX" } ],
+		// [
+		// 	"script",
+		// 	{},
+		// 	`
+		// 		window.dataLayer = window.dataLayer || [];
+		// 		function gtag(){dataLayer.push(arguments);}
+		// 		gtag('js', new Date());
+		// 		gtag('config', 'G-WW5WXCXDFX');
+		// 	`
+		// ]
     ],
 	themeConfig: {
 		pages: await getPages(),
