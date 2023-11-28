@@ -83,4 +83,7 @@ export default defineConfig(<UserConfig<any>>{
 			indexName: "luckyzh",
 		}
 	},
+	sitemap: {
+		hostname: 'https://www.luckyzh.cn',
+	}
 })
