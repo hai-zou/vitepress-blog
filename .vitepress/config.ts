@@ -67,15 +67,12 @@ export default defineConfig(<UserConfig<any>>{
             { text: "留言", link: "/messages.html" },
             { text: "关于", link: "/about.html" },
         ],
-		giscusConfig: {
-			repo: "hai-zou/vitepress-blog",
-			repoId: "R_kgDOKwOEkg",
-			category: "General",
-			categoryId: "DIC_kwDOKwOEks4CbMoS",
-			mapping: "pathname",
-			placeholder: "Welcome to component!",
-			inputPosition: "top",
-			lang: "zh-CN",
+		commentConfig: {
+			type: "valine",
+			options: {
+				appId: "XXZEyuLDolX9MAHmxNSYLAzy-gzGzoHsz",
+				appKey: "qzv88EGymhIWw3vRh1RO4M3J",
+			}
 		},
 		algoliaConfig: {
 			appId: "A6S1DCIE2I",
