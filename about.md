@@ -2,6 +2,7 @@
 title: 关于
 customPage: true
 hideComment: true
+subscribe: true
 ---
 
 ## 关于博主

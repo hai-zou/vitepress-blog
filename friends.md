@@ -5,7 +5,7 @@ hideComment: true
 ---
 
 ::: tip
-[如何添加友链](https://github.com/hai-zou/vitepress-blog/edit/main/data/links.js)
+[如何添加友链](https://github.com/hai-zou/vitepress-blog/edit/main/data/links.ts)
 :::
 
 <FriendLinks />

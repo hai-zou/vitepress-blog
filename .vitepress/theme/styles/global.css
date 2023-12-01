@@ -1,0 +1,71 @@
+.post-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.post-item .p-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.post-item .cate-item:hover {
+    text-decoration: none;
+}
+
+.p-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #666666;
+}
+
+.float-tool-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: var(--vp-c-bg);
+    border: 1px solid var(--vp-c-border);
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+}
+
+.float-tool-btn.hide {
+    display: none;
+}
+
+.float-tool-btn:hover {
+    background-color: var(--vp-c-brand);
+    border-color: var(--vp-c-brand);
+    color: var(--vp-c-bg);
+}
+
+.float-tool-btn:hover .DocSearch-Button .DocSearch-Search-Icon {
+    color: var(--vp-c-bg);
+}
+
+.float-tool-btn:hover .p-icon {
+    fill: var(--vp-c-bg);
+}
+
+:root {
+    --vp-c-brand: #646cff;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .layout-container .toggle-menus {
+        display: inline-flex !important;
+    }
+    .layout-container .nav-menu {
+        display: none !important;
+    }
+}

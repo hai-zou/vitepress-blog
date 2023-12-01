@@ -1,22 +1,29 @@
 {
-  "name": "vitepress-blog",
-  "version": "1.0.0",
-  "description": "个人博客",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
-  },
-  "keywords": [],
-  "author": "haizou",
-  "license": "ISC",
-  "dependencies": {
-    "vitepress-theme-poseidon": "^0.2.14"
-  },
-  "devDependencies": {
-    "vitepress": "^1.0.0-rc.31"
-  }
+    "name": "vitepress-blog",
+    "version": "1.0.0",
+    "description": "个人博客",
+    "main": "index.js",
+    "type": "module",
+    "keywords": [],
+    "author": "haizou",
+    "license": "ISC",
+    "scripts": {
+        "docs:dev": "vitepress dev",
+        "docs:build": "vitepress build && npm run rss",
+        "docs:preview": "vitepress preview",
+        "rss": "node ./scripts/rss.js"
+    },
+    "dependencies": {
+        "@docsearch/js": "^3.4.0",
+        "@giscus/vue": "^2.3.0",
+        "@fancyapps/ui": "^5.0.19",
+        "lazysizes": "^5.3.2",
+        "valine": "^1.5.1"
+    },
+    "devDependencies": {
+        "globby": "^13.1.4",
+        "gray-matter": "^4.0.3",
+        "rss": "^1.2.2",
+        "vitepress": "^1.0.0-rc.31"
+    }
 }
