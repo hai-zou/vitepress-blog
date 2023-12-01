@@ -6,7 +6,7 @@
         </a>
 
 		<a class="float-tool-btn" href="/rss.xml">
-			rss
+			<Rss class="p-icon" />
 		</a>
 
         <ToggleTheme />
@@ -18,6 +18,7 @@
 import BackTop from "./BackTop.vue";
 import ToggleTheme from "./ToggleTheme.vue";
 import Search from "./Search.vue";
+import Rss from "../icons/Rss.vue";
 import { useData } from 'vitepress';
 
 const { theme } = useData();
