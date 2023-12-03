@@ -29,7 +29,6 @@ import Github from "../icons/Github.vue";
 import { useData } from 'vitepress';
 
 const { theme } = useData();
-console.log(theme);
 </script>
 
 <style scoped>
