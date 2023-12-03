@@ -56,6 +56,21 @@
     fill: var(--vp-c-bg);
 }
 
+html::-webkit-scrollbar {
+    width: 6px;
+    height: 5px;
+}
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--vp-c-gray);
+}
+
+html::-webkit-scrollbar-track {
+    background-color: var(--vp-c-gray-2);
+    border-radius: 3px;
+}
+
 :root {
     --vp-c-brand: #646cff;
 }

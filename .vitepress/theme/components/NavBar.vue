@@ -13,8 +13,8 @@
                 </div>
             </div>
         </header>
-        <MobileMenu class="mobile-menus" @close="closeMobileMenu" />
     </div>
+    <MobileMenu class="mobile-menus" @close="closeMobileMenu" />
 </template>
   
 <script setup lang="ts">
@@ -43,14 +43,16 @@ function toggleMenuActive() {
 
 <style scoped>
 .nav-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
     width: 100%;
-    border-bottom: 1px solid var(--vp-c-divider);
     height: var(--vp-nav-height);
+    box-shadow: 0 2px 5px var(--vp-c-divider);
 }
 
 .nav-bar {
-    position: sticky;
-    z-index: 11;
     width: 85%;
     max-width: var(--vp-layout-max-width);
     background-color: var(--vp-c-bg);
@@ -80,22 +82,20 @@ function toggleMenuActive() {
     display: none;
 }
 
-.nav-bar-container .mobile-menus {
+.nav-bar-container + .mobile-menus {
     position: fixed;
     top: 0px;
     left: 0px;
     right: 0px;
     bottom: 0px;
     z-index: 10;
-    transition: opacity .3s cubic-bezier(.4,0,.2,1);
-    transform: translateY(-100%);
-    opacity: 0;
+    padding-top: var(--vp-nav-height);
+    transition: transform .3s cubic-bezier(.4,0,.2,1);
+    transform: translateX(-100%);
 }
 
-.nav-bar-container.active .mobile-menus {
-    top: var(--vp-nav-height);
-    transform: translateY(0);
-    opacity: 1;
+.nav-bar-container.active + .mobile-menus {
+    transform: translateX(0);
 }
 </style>
   

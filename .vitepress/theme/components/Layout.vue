@@ -33,7 +33,7 @@ const { frontmatter, page } = useData();
 .layout-container .main-container {
     width: 85%;
     max-width: var(--vp-layout-max-width);
-    margin: 0 auto;
+    margin: var(--vp-nav-height) auto 0;
 }
 </style>
   
