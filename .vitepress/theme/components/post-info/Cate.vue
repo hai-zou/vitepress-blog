@@ -5,7 +5,7 @@
             class="cate-item"
             v-for="cate in props.category"
             :key="cate"
-            :href="'/categories.html?type=' + cate"
+            :href="'/categories/' + cate + '.html'"
         >
             {{ cate }}
         </a>
