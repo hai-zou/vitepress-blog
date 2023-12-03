@@ -95,8 +95,13 @@ function getList() {
     color: var(--vp-c-red);
 }
 
+.article-item:hover .article-title {
+    color: var(--vp-c-brand);
+}
+
 .article-item:hover .article-line {
     width: 5rem;
+    border-color: var(--vp-c-brand);
 }
 
 .article-item .article-title {
