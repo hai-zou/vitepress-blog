@@ -47,6 +47,11 @@
     color: var(--vp-c-bg);
 }
 
+.float-tool-btn .p-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
 .float-tool-btn:hover .p-icon {
     fill: var(--vp-c-bg);
 }

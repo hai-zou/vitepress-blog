@@ -46,6 +46,7 @@ export default defineConfigWithTheme<any>({
         author: "Hizo",
         logo: "/favicon.ico",
         startTime: '2023-06-08 00:00:00',
+        repo: 'hai-zou/vitepress-blog',
         nav: [
             {
                 text: "技术",
