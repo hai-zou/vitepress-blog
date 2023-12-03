@@ -55,7 +55,7 @@ const sortList = computed(() => {
     });
 });
 
-watch(route, () => {
+watch(() => route.path, () => {
     const params = route.data.params;
     const { pkg } = params || {};
     pageIndex.value = pkg || 1;
