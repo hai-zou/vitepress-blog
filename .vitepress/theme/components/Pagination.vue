@@ -57,7 +57,7 @@ function onNextPage() {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 
 .pagination-container .arrow {

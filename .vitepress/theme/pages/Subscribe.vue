@@ -57,14 +57,9 @@ function onSubmit() {
     border-bottom: 1px solid var(--vp-c-border);
 }
 
-.sub-box {
-	margin: 3rem 0;
-}
-
 #sub-form {
 	box-sizing: border-box;
 	padding: 2rem;
-	border: 1px solid var(--vp-c-border);
 	border-top: none;
 }
 

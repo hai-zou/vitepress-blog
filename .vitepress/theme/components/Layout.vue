@@ -15,6 +15,8 @@
         <FloatTools>
             <template #extra-tools><slot name="extra-tools" /></template>
         </FloatTools>
+
+        <SiteFooter />
     </div>
 </template>
   
@@ -24,6 +26,7 @@ import Home from "./Home.vue";
 import Page from "./Page.vue";
 import NotFound from "./NotFound.vue";
 import FloatTools from "./FloatTools.vue";
+import SiteFooter from "./Footer.vue";
 import { useData } from "vitepress";
 
 const { frontmatter, page } = useData();
@@ -34,6 +37,7 @@ const { frontmatter, page } = useData();
     width: 85%;
     max-width: var(--vp-layout-max-width);
     margin: var(--vp-nav-height) auto 0;
+    padding-top: 2rem;
 }
 </style>
   

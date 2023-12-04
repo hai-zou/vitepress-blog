@@ -1,20 +1,23 @@
 <template>
-    <div class="page-container vp-doc">
-        <div class="md-header">
-            <h1 class="md-title">{{ frontmatter.title }}</h1>
-            <div class="post-info">
-                <Time :date="frontmatter.date || ''" />
-                <Cate :category="frontmatter.category || []" />
+    <div class="vp-doc">
+        <div class="page-container card-box">
+            <div class="md-header">
+                <h1 class="md-title">{{ frontmatter.title }}</h1>
+                <div class="post-info">
+                    <Time :date="frontmatter.date || ''" />
+                    <Cate :category="frontmatter.category || []" />
+                </div>
             </div>
+            <Content />
+            <!-- 相关文章推荐 Related articles -->
+            <Related v-if="isShowRelated" />
         </div>
-        <Content />
-        <!-- 相关文章推荐 Related articles -->
-        <Related v-if="isShowRelated" />
+
         <slot name="page-bottom" />
 
-        <Subscribe v-if="frontmatter.subscribe" />
+        <Subscribe class="card-box" v-if="frontmatter.subscribe" />
 
-        <template v-if="isShowComment">
+        <div v-if="isShowComment" class="card-box">
             <GiscusComment
                 v-if="commentConfig.type === 'giscus'"
                 :options="commentConfig.options"
@@ -23,9 +26,7 @@
                 v-if="commentConfig.type === 'valine'"
                 :options="commentConfig.options"
             />
-        </template>
-
-        <SiteFooter />
+        </div>
     </div>
 </template>
 
@@ -33,7 +34,6 @@
 import Related from "./Related.vue";
 import GiscusComment from "./comment/GiscusComment.vue";
 import ValineComment from "./comment/ValineComment.vue";
-import SiteFooter from "./Footer.vue";
 import Cate from "./post-info/Cate.vue";
 import Time from "./post-info/Time.vue";
 import Subscribe from "../pages/Subscribe.vue";
@@ -58,8 +58,11 @@ const isShowComment = computed(() => {
 </script>
   
 <style scoped>
-.page-container {
-    padding: 1.5rem 0.5rem;
+.card-box {
+    padding: 1rem 2.5rem;
+    border-radius: 5px;
+    background-color: var(--vp-main-bg);
+    margin-bottom: 1rem;
 }
 
 .page-container .md-title {

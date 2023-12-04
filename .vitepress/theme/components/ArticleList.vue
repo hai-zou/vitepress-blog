@@ -1,8 +1,8 @@
 <template>
     <div class="article-item" v-for="article in displayList" :key="article.path">
+        <PinToTop v-if="article.top" class="top-flag" />
         <h2 class="article-title">
             <a class="link" :href="article.path">
-                <span v-if="article.top" class="top-flag">[置顶]</span>
                 {{ article.title || "" }}
             </a>
         </h2>
@@ -29,6 +29,7 @@ import { useData, useRoute } from "vitepress";
 import Pagination from "./Pagination.vue";
 import Cate from "./post-info/Cate.vue";
 import Time from "./post-info/Time.vue";
+import PinToTop from "../icons/PinToTop.vue";
 import { PageData } from '../types/interface';
 
 const { theme } = useData();
@@ -75,13 +76,24 @@ function getList() {
 
 <style scoped>
 .article-item {
-    width: 100%;
-    padding: 2rem 0.5rem;
-    border-bottom: 1px solid var(--vp-c-divider);
+    position: relative;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.8rem;
+    transition: all .3s;
+    border-radius: 5px;
+    background-color: var(--vp-main-bg);
+}
+
+.article-item:hover {
+    box-shadow: 0 1px 15px 0 var(--vp-article-shadow);
 }
 
 .article-item .top-flag {
-    color: var(--vp-c-red);
+    position: absolute;
+    top: -1px;
+    right: 0;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .article-item:hover .article-title {

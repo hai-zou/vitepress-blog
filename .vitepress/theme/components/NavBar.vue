@@ -1,5 +1,5 @@
 <template>
-    <div class="nav-bar-container" :class="{ active: mobileMenuActive }">
+    <div class="nav-bar-container blur" :class="{ active: mobileMenuActive }">
         <header class="nav-bar">
             <h2 class="logo" @click="closeMobileMenu">
                 <a href="/">{{ site.title }}</a>
@@ -30,6 +30,7 @@ const mobileMenuActive = ref(false);
 
 function closeMobileMenu() {
     mobileMenuActive.value = false;
+    document.body.style.overflow = "auto";
 }
 function toggleMenuActive() {
     mobileMenuActive.value = !mobileMenuActive.value;
@@ -50,12 +51,17 @@ function toggleMenuActive() {
     width: 100%;
     height: var(--vp-nav-height);
     box-shadow: 0 2px 5px var(--vp-c-divider);
+    background-color: var(--vp-header-bg);
+}
+
+.nav-bar-container.blur {
+    -webkit-backdrop-filter: saturate(200%) blur(20px);
+    backdrop-filter: saturate(200%) blur(20px);
 }
 
 .nav-bar {
     width: 85%;
     max-width: var(--vp-layout-max-width);
-    background-color: var(--vp-c-bg);
     height: 100%;
     margin: 0 auto;
     display: flex;

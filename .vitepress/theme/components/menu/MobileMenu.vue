@@ -60,7 +60,7 @@ onUnmounted(() => {
 
 <style scoped>
 .mobile-menus-container {
-    background-color: var(--vp-c-bg);
+    background-color: var(--vp-main-bg);
     overflow: auto;
 }
 

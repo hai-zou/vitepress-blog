@@ -57,7 +57,10 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-    --vp-c-bg: #ffffff;
+    --vp-header-bg: hsla(0,0%,100%,0.9);
+    --vp-c-bg: #f4f4f4;
+    --vp-main-bg: #ffffff;
+    --vp-article-shadow: rgba(0,0,0,.1);
 
     --vp-c-bg-elv: #ffffff;
     --vp-c-bg-elv-up: #ffffff;
@@ -102,7 +105,10 @@
 }
 
 html[theme=dark] {
-    --vp-c-bg: #1e1e20;
+    --vp-header-bg: rgba(30,30,34,0.8);
+    --vp-c-bg: #27272b;
+    --vp-main-bg: #1e1e22;
+    --vp-article-shadow: rgba(255,255,255,.1);
 
     --vp-c-bg-elv: #252529;
     --vp-c-bg-elv-up: #313136;
