@@ -15,11 +15,6 @@ export default [
         link: "https://anzhiy.cn/",
     },
     {
-        name: "胡涂说",
-        desc: "hutusi.com",
-        link: "https://hutusi.com/",
-    },
-    {
         name: "木木木木木",
         desc: "不问明天，悠然浪费～",
         link: "https://immmmm.com/",
