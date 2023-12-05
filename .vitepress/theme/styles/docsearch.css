@@ -20,6 +20,10 @@ html[theme=dark] .DocSearch {
     --docsearch-hit-shadow: none;
 }
 
+.DocSearch-Container {
+    position: fixed;
+}
+
 .DocSearch-Button {
     display: flex;
     justify-content: center;
