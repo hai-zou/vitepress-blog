@@ -2,13 +2,11 @@
     <div class="float-tools-container">
         <BackTop />
 
-        <a v-if="!!theme.algoliaConfig" class="float-tool-btn">
+        <div v-if="!!theme.algoliaConfig" class="float-tool-btn">
             <Search />
-        </a>
+        </div>
 
-        <ToggleTheme />
-
-		<a class="float-tool-btn" href="/rss.xml">
+		<a class="float-tool-btn" target="_blank" href="/rss.xml">
 			<Rss class="p-icon" />
 		</a>
 
@@ -17,6 +15,8 @@
 		</a>
 
         <slot name="extra-tools" />
+
+        <ToggleTheme />
     </div>
 </template>
 

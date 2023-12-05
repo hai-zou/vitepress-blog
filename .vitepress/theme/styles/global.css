@@ -40,7 +40,6 @@
 .float-tool-btn:hover {
     background-color: var(--vp-c-brand);
     border-color: var(--vp-c-brand);
-    color: var(--vp-c-bg);
 }
 
 .float-tool-btn:hover .DocSearch-Button .DocSearch-Search-Icon {
