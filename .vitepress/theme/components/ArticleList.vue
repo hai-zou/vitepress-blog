@@ -1,5 +1,5 @@
 <template>
-    <div class="article-item" v-for="article in displayList" :key="article.path">
+    <div class="article-item" v-for="article in articleList" :key="article.path">
         <PinToTop v-if="article.top" class="top-flag" />
         <h2 class="article-title">
             <a class="link" :href="article.path">
@@ -15,63 +15,15 @@
             <Cate :category="article.category" />
         </div>
     </div>
-    <Pagination
-        :page-index="pageIndex"
-        :page-size="pageSize"
-        :length="sortList.length"
-        @pageChange="pageChange"
-    />
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from "vue";
-import { useData, useRoute } from "vitepress";
-import Pagination from "./Pagination.vue";
+import { PageData } from '../types/interface';
 import Cate from "./post-info/Cate.vue";
 import Time from "./post-info/Time.vue";
 import PinToTop from "../icons/PinToTop.vue";
-import { PageData } from '../types/interface';
 
-const { theme } = useData();
-const list = computed<PageData[]>(() => theme.value.pages);
-const displayList = ref<PageData[]>([]);
-const route = useRoute();
-const pageIndex = ref(1);
-const pageSize = ref(10);
-
-// 1. 先按排序置顶文章
-// 2. 再按时间倒序排序
-const sortList = computed(() => {
-    const allList = cloneList(list.value);
-    return allList.sort((a, b) => {
-        if (a.top === b.top) {
-            return b.date! - a.date!;
-        }
-        return b.top! - a.top!;
-    });
-});
-
-watch(() => route.path, () => {
-    const params = route.data.params;
-    const { pkg } = params || {};
-    pageIndex.value = pkg || 1;
-    getList();
-}, { immediate: true });
-
-function cloneList(list: PageData[]) {
-    return list.map(item => item);
-}
-
-function pageChange(pageEvent) {
-    const { index } = pageEvent;
-    pageIndex.value = index;
-}
-
-function getList() {
-    const startIndex = (pageIndex.value - 1) * pageSize.value;
-    const endIndex = startIndex + pageSize.value;
-    displayList.value = sortList.value.slice(startIndex, endIndex);
-}
+defineProps<{ articleList: PageData[] }>();
 </script>
 
 <style scoped>
