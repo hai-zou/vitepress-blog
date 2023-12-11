@@ -12,6 +12,7 @@ import "./styles/custom-block.css";
 import "./styles/vp-doc.css";
 import "./styles/docsearch.css";
 import "./styles/global.css";
+import "./styles/waline.css";
 
 // 图片放大插件
 import fancyapps from "@fancyapps/ui/dist/fancybox/fancybox.umd";

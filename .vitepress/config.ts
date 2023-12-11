@@ -67,10 +67,9 @@ export default defineConfigWithTheme<any>({
             { text: "关于", link: "/about.html" },
         ],
         commentConfig: {
-            type: "valine",
+            type: "waline",
             options: {
-                appId: "XXZEyuLDolX9MAHmxNSYLAzy-gzGzoHsz",
-                appKey: "qzv88EGymhIWw3vRh1RO4M3J",
+                serverURL: "https://waline.luckyzh.cn/",
             }
         },
         algoliaConfig: {

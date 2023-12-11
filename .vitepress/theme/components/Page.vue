@@ -26,6 +26,10 @@
                 v-if="commentConfig.type === 'valine'"
                 :options="commentConfig.options"
             />
+            <WalineComment
+                v-if="commentConfig.type === 'waline'"
+                :options="commentConfig.options"
+            />
         </div>
     </div>
 </template>
@@ -34,6 +38,7 @@
 import Related from "./Related.vue";
 import GiscusComment from "./comment/GiscusComment.vue";
 import ValineComment from "./comment/ValineComment.vue";
+import WalineComment from "./comment/WalineComment.vue";
 import Cate from "./post-info/Cate.vue";
 import Time from "./post-info/Time.vue";
 import Subscribe from "../pages/Subscribe.vue";

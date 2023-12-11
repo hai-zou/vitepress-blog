@@ -47,3 +47,7 @@ export interface ValineOptions {
     appKey: string;
     [key: string]: any;
 }
+
+export interface WalineOptions {
+    serverURL: string;
+}
