@@ -5,6 +5,10 @@ category:
   - Node
 ---
 
+## 简介
+webp 格式的图片在保持图像质量的前提下，能够显著减小文件尺寸，提高网页加载速度。
+以下是一段之前写过的图片格式转 webp 的 Node 脚本，留作记录。
+
 ```js
 import sharp from "sharp";
 import fs from "fs";
